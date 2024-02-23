@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const Postcard = () => {
+const Postcard = ({post}) => {
   return (
     <div className="flex flex-col gap-5 mb-5 ">
        <div className=" flex mt-12">
@@ -11,9 +11,9 @@ const Postcard = () => {
         <span className="text-sm rotate-[270deg] m-auto font-sans">24-02-2024</span>
        </div>
        <div className="">
-        <h1 className="text-2xl mb-5 w-[90%]">Tips for Poster Design</h1>
-        <p className="mb-5 w-[90%] font-light text-gray-500">Professional Website Design</p>
-        <Link className="underline" href="/blog/post">READ MORE</Link>
+        <h1 className="text-2xl mb-5 w-[90%]">{post.title}</h1>
+        <p className="mb-5 w-[90%] font-light text-gray-500">{post.body}</p>
+        <Link className="underline" href={`/blog/${post.id}`}>READ MORE</Link>
        </div>
        </div>
     
