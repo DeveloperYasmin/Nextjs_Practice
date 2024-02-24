@@ -20,7 +20,6 @@ export const addPost= async(prevState,formData)=>{
             title,desc,slug,userId
         })
         await newPost.save()
-        console.log("saved to db")
         revalidatePath("/blog")
         revalidatePath("/admin")
     } catch(err){
@@ -39,7 +38,6 @@ export const deletePost= async(formData)=>{
         connectToDb()
     
         await Post.findByIdAndDelete(id)
-        console.log("deleted from db")
         revalidatePath("/blog")
         revalidatePath("/admin")
     } catch(err){
@@ -63,7 +61,7 @@ export const addUser= async(prevState,formData)=>{
             username,email,password,img
         })
         await newUser.save()
-        console.log("saved to db")
+        g("saved to db")
         revalidatePath("/admin")
     } catch(err){
         return { error: "Something went wrong!"}
@@ -83,7 +81,6 @@ export const deleteUser= async(formData)=>{
         connectToDb()
         await Post.deleteMany({userId:id})
         await User.findByIdAndDelete(id)
-        console.log("deleted from db")
         revalidatePath("/admin")
     } catch(err){
         return { error: "Something went wrong!"}

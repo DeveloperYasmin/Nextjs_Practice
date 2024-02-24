@@ -43,7 +43,6 @@ CredentialsProvider({
 
 callbacks:{
     async signIn({user,account,profile}){
-        console.log(user,account,profile)
         if(account.provider === "github")
         {
             connectToDb()
@@ -60,7 +59,6 @@ callbacks:{
               }
             }
             catch(err){
-                console.log(err)
             return false 
             }
         }

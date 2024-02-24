@@ -3,7 +3,6 @@ import { addPost, deletePost } from "../lib/action"
 const ServerActionTestPage = () => {
     // const actionincomponent=async()=>{
     //     "use server"
-    //     console.log("it works")
     // }
   return (
     <div>
