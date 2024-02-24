@@ -4,6 +4,7 @@ import Image from "next/image"
 const Loginpage = () => {
   return (
       <div>
+    
          <div className="flex-1  relative">
        <Image className="object-contain" src="/about.png" alt="pic" fill/>
       </div>
