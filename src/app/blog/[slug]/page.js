@@ -2,10 +2,11 @@ import Image from "next/image"
 import PostUser from "@/app/components/postuser/postuser"
 import { Suspense } from "react"
 import { getPost} from "@/app/lib/data"
+import { BASE_API_URL } from "@/app/utils/constants"
 //FETCH WITH AN API
 const getdata=async (slug)=>{
 
-    const res= await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/blog/${slug}`)
+    const res= await fetch(`${BASE_API_URL}/api/blog/${slug}`)
      
     if(!res.ok)
     {
