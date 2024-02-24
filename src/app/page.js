@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const page = () => {
   return (
@@ -7,8 +8,8 @@ const page = () => {
       <h1 className="md:text-6xl text-5xl p-[3px] bg-gradient-to-r from-yellow-600 to-white text-transparent bg-clip-text">Creative Thoughts Agency</h1>
       <p className="md:text-lg text-md">Creativity is seeing what everyone else has seen, and thinking what no one else has thought</p>
       <div  className="flex md:gap-5 gap-2">
-        <button className="p-5 min-w-32 cursor-pointer border-none border-spacing-1 text-black font-semibold rounded-md bg-yellow-600">Learn More</button>
-        <button className="p-5 text-black font-semibold min-w-32 cursor-pointer border-none border-spacing-1 rounded-md bg-white ">Contact</button>
+        <Link href="/about"><button className="p-5 min-w-32 cursor-pointer border-none border-spacing-1 text-black font-semibold rounded-md bg-yellow-600">Learn More</button></Link>
+        <Link href="/contact"><button className="p-5 text-black font-semibold min-w-32 cursor-pointer border-none border-spacing-1 rounded-md bg-white ">Contact</button></Link>
       </div>
       <div className=" md:w-[500px] md:w[200px] h-[50px] relative grayscale">
         <Image src="/brands.png" alt="brands" fill/>
