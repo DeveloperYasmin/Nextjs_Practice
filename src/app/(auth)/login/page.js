@@ -1,4 +1,5 @@
 import LoginForm from "@/app/components/loginForm/loginForm"
+import Image from "next/image"
 
 const Loginpage = () => {
   return (
