@@ -1,7 +1,6 @@
 import { deleteUser } from "@/app/lib/action";
 import { getUsers } from "@/app/lib/data"
 
-import Image from "next/image";
 
 const AdminUser = async() => {
 
@@ -14,7 +13,7 @@ const AdminUser = async() => {
       {users.map((user)=>(
         <div  className=" m-5 flex items-center justify-between gap-5" key={user.id}>
             <div className="items-center flex gap-5">
-                <Image src={user.img || "/noAvatar.png"} alt="" width={50} height={50}/>
+                
                 <span className="">{user.username}</span> 
         </div>
         <form action={deleteUser}>

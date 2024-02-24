@@ -3,10 +3,11 @@ const nextConfig = {
     images:{
         remotePatterns:[
             {
+                protocol:"http",
                 protocol:"https",
-                hostname:"w7.pngwing.com",
-                hostname:"render.fineartamerica.com",
-                hostname:"images.pexels.com"
+                hostname:"/w7.pngwing.com",
+                hostname:"/render.fineartamerica.com",
+                hostname:"/images.pexels.com"
             },
             
         ]

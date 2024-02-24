@@ -61,7 +61,6 @@ export const addUser= async(prevState,formData)=>{
             username,email,password,img
         })
         await newUser.save()
-        g("saved to db")
         revalidatePath("/admin")
     } catch(err){
         return { error: "Something went wrong!"}

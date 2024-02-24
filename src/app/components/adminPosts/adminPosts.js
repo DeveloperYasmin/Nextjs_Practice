@@ -1,7 +1,6 @@
 import { deletePost } from "@/app/lib/action";
 import { getPosts } from "@/app/lib/data"
 
-import Image from "next/image";
 
 const AdminPosts = async() => {
 
@@ -14,7 +13,6 @@ const AdminPosts = async() => {
       {posts.map((post)=>(
         <div className=" m-5 flex items-center justify-between gap-5" key={post.id}>
             <div className="tems-center flex gap-5">
-                <Image src={post.img || "/noAvatar.png"} alt="" width={50} height={50}/>
                 <span >{post.title}</span> 
         </div>
         <form action={deletePost}>
