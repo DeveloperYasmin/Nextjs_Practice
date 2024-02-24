@@ -16,7 +16,7 @@ const PostUser = async({userId}) => {
     const user=await getUser(userId)
   return (
     <div className="flex items-center gap-5">
-                    <Image src={user.img ? user.img :"/noavatar.png"} alt="" className="object-cover rounded-full gap-2" width={60} height={50}/>
+                    <Image src={user?.img ? user?.img :"/noavatar.png"} alt="" className="object-cover rounded-full gap-2" width={40} height={50}/>
 <div className="flex flex-col gap-3">
                     <span className="text-gray-500 font-bold">Author</span>
                     <span className="font-medium">{user?.username}</span></div>

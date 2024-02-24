@@ -4,10 +4,13 @@ import { Suspense } from "react"
 import { getPost} from "@/app/lib/data"
 //FETCH WITH AN API
 const getdata=async (slug)=>{
-    const res=await fetch(`http://localhost:3000/api/blog/${slug}`)
+
+    const res= await fetch(`http://localhost:3000/api/blog/${slug}`)
      
     if(!res.ok)
-    throw new Error("Something went wrong")
+    {
+    return{error:"Something went wrong"}
+    }
   
    return res.json()
   }
@@ -41,7 +44,7 @@ const {slug}=params
                 </Suspense>}
                 <div className="flex flex-col gap-3">
                     <span className="text-gray-500 font-bold">Published</span>
-                    <span className="font-medium font-sans">{post.createdAt.toString().slice(4,16)}</span>
+                    <span className="font-medium font-sans">{post.createdAt?.toString()?.slice(4,16)}</span>
                 </div>
                 </div>
                 <div className="md:text-lg flex-1 text-md">
