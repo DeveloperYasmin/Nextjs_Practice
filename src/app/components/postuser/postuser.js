@@ -1,4 +1,5 @@
 import { getUser } from "@/app/lib/data"
+import Image from "next/image"
 //FETCH WITH AN API
 // const getdata=async (userId)=>{
 //     const res=await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {cache:"no-store"})
@@ -14,9 +15,11 @@ const PostUser = async({userId}) => {
     //FETCH WITHOUT AN API
     const user=await getUser(userId)
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex items-center gap-5">
+                    <Image src={user.img ? user.img :"/noavatar.png"} alt="" className="object-cover rounded-full gap-2" width={60} height={50}/>
+<div className="flex flex-col gap-3">
                     <span className="text-gray-500 font-bold">Author</span>
-                    <span className="font-medium">{user?.username}</span>
+                    <span className="font-medium">{user?.username}</span></div>
     </div>
   )
 }

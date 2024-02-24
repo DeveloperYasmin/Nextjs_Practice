@@ -2,9 +2,8 @@
 import { useState } from 'react'
 import Navlink from '../navlink/navlink'
 import Image from 'next/image'
+import { handleLogout } from '@/app/lib/action'
 
-const Links = () => {
-    const [open,setopen]=useState(false)
 
     const links = [
         {
@@ -26,17 +25,22 @@ const Links = () => {
         
     ]
 
-    const session= true
-    const isadmin=true
+    const Links =({session})=>{
+        const [open,setopen]=useState(false)
+    
+    //TEMPORARY
+    const isAdmin=true
   return (
     <div>
     <div className='lg:flex items-center gap-3 hidden'>
         {links.map((link=>(
             <Navlink item={link} key={link.title}/>
-        )))}{session?(
+        )))}{session?.user?(
             <>      
-            { isadmin && <Navlink item={{title:"Admin",path:"/admin"}}/>}
+            {session.user?.isAdmin && <Navlink item={{title:"Admin",path:"/admin"}}/>}
+            <form action={handleLogout}>
              <button className='bg-yellow-600 rounded-md p-3 m-2 text-black font-bold'>Logout</button>
+             </form>
              </>
 
         ):(

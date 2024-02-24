@@ -2,14 +2,14 @@ import Postcard from "@/app/components/postcard/postcard"
 import { getPosts } from "../lib/data"
 
 //FETCH WITH AN API
-// const getdata=async ()=>{
-//   const res=await fetch("https://jsonplaceholder.typicode.com/posts" , {next:{revalidate:3600}})
+const getdata=async ()=>{
+  const res=await fetch("http://localhost:3000/api/blog" , {next:{revalidate:3600}})
    
-//   if(!res.ok)
-//   throw new Error("Something went wrong")
+  if(!res.ok)
+  throw new Error("Something went wrong")
 
-//  return res.json()
-// }
+ return res.json()
+}
 const blogpage = async () => {
   //FETCH WITH AN API
  // const posts= await getdata()
