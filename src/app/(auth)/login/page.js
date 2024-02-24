@@ -8,9 +8,10 @@ const Loginpage = () => {
       <div className="w-[500px] bg-stone-800  p-12 flex flex-col text-center gap-7 rounded-md">
 
         <h1>Login With Github</h1>
-      </form>
+      
       <LoginForm/>
-    </div></div>
+    </div>
+    </div>
   )
 }
 
