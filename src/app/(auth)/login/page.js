@@ -1,4 +1,4 @@
-import LoginForm from "@/app/components/loginForm/loginform"
+import LoginForm from "@/app/components/loginForm/loginForm"
 import { handleGithubLogin } from "@/app/lib/action"
 
 

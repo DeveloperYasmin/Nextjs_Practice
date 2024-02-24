@@ -37,7 +37,7 @@ import { handleLogout } from '@/app/lib/action'
             <Navlink item={link} key={link.title}/>
         )))}{session?.user?(
             <>      
-            {session.user?.isAdmin && <Navlink item={{title:"Admin",path:"/admin"}}/>}
+            {session?.user?.isAdmin && <Navlink item={{title:"Admin",path:"/admin"}}/>}
             <form action={handleLogout}>
              <button className='bg-yellow-600 rounded-md p-3 m-2 text-black font-bold'>Logout</button>
              </form>
