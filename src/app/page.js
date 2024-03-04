@@ -1,11 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import { BASE_API_URL } from "./utils/constants"
 
 const page = () => {
-  if(!BASE_API_URL){
-    return null
-  }
+ 
   return (
     <div className="flex gap-5 mt-5">
       <div className="flex-1 flex flex-col gap-12 ">

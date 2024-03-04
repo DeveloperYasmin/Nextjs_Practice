@@ -1,10 +1,9 @@
 import Postcard from "@/app/components/postcard/postcard"
 import { getPosts } from "../lib/data"
-import { BASE_API_URL } from "../utils/constants"
 
 //FETCH WITH AN API
 const getdata=async ()=>{
-  const res=await fetch(`${BASE_API_URL}/api/blog` , {next:{revalidate:3600}})
+  const res = await fetch("http://localhost:3000/api/blog", {next:{revalidate:3600}});
    
   if(!res.ok)
   throw new Error("Something went wrong")
