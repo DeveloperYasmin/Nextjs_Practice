@@ -1,15 +1,22 @@
-import Link from "next/link"
+import { useRouter } from "next/router"
 
 const Links = () => {
-  return (
-    <nav>
-        <Link href="/"> <a>Logo</a></Link>
-        <ul>
-            <li><Link legacyBehavior  href="/"><a>Home</a></Link></li>
-            <li><Link legacyBehavior  href="/about"><a>About</a></Link></li>
+    const router=useRouter()
 
-        </ul>
-    </nav>
+    const navigatetoabout=()=>{
+        router.push("/about")
+    }
+
+    const navigatetohome=()=>{
+        router.push("/")
+    }
+  return (
+    <div>
+                <button onClick={navigatetohome}>Go to Home</button>
+
+        <button onClick={navigatetoabout}>Go to About</button>
+
+    </div>
   )
 }
 
