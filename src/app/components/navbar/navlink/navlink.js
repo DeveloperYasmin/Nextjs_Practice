@@ -10,9 +10,9 @@ const NavLink = ({ item }) => {
   return (
     <Link
       href={item.path}
-      className= ${
-        pathName === item.path 
-      }
+      className={` ${
+        pathName === item.path && styles.active
+      }`}
     >
       {item.title}
     </Link>
