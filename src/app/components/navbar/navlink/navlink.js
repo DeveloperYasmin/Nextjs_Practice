@@ -12,7 +12,7 @@ const NavLink = ({ item }) => {
       href={item.path}
       className= ${
         pathName === item.path 
-      }`}
+      }
     >
       {item.title}
     </Link>
